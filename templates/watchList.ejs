@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Movie Watchlist</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <div id="nav">
+        <a href="/">HOMEPAGE</a>
+        <a href="/watchList">YOUR WATCHLIST</a>
+    </div>
+
+    <div id="wlt">
+	    <h1>Your Movie Watchlist</h1>
+    </div>
+
+    <div id="table">
+        <%- watchlistTable %>
+    </div>
+
+    <br>
+
+    <form action="/remove" method="post" onsubmit="confirmRemoval(event)">
+        <input type="submit" id="remove" value="Remove All Movies From Watchlist">
+    </form>
+    <script>
+        function confirmRemoval(event) {
+            const confirmed = window.confirm("Are you sure you want to remove all movies from your watchlist?");
+            if (!confirmed) {
+                event.preventDefault();
+            }
+        }
+    </script>
+
+    <br>
+
+    <form action="/" method="get">
+        <input type="submit" id="continue" value="Continue Searching">
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Search Result</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <div id="nav">
+        <a href="/">HOMEPAGE</a>
+        <a href="/watchList">YOUR WATCHLIST</a>
+    </div>
+    <div id="info">
+        <h2>Movie Info</h2>
+        <img src="<%- image %>" alt="<%- title%>"><br><br>
+        <label>Title: </label><%- title %><br><br>
+        <label>Description: </label><%- description %><br><br>
+        <label>Year: </label><%- year %><br><br>
+        <label>Rating: </label><%- rating %><br><br>
+        <label>Genre: </label><%- genre %><br><br>
+    </div>  
+
+    <hr>
+    <br>
+
+	<form action="/watchList" method="post">
+        <input type="hidden" name="movieTitle" value="<%- title %>">
+        <input type="hidden" name="year" value="<%- year %>">
+        <input type="hidden" name="genre" value="<%- genre %>">
+        <input type="hidden" name="description" value="<%- description %>">
+        <input type="submit" value="Add to Watchlist" id="submitButton" name="submitButton">
+    </form>
+
+    <br>
+    <br>
+
+
+</body>
+
+</html>

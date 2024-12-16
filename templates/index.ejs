@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Movies</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <div id="nav">
+        <a href="/">HOMEPAGE</a>
+        <a href="/watchList">YOUR WATCHLIST</a>
+    </div>
+
+    <br>
+
+    
+
+    <div id="poster">
+        <fieldset>
+            <legend><h1><b>Movies</b></h1></legend>
+            <img src="imdb_top.png" id="imdb" height="375" width="750">
+        </fieldset>
+
+    </div>  
+
+    
+    <br>
+
+    <div id="search">
+        <form action="/result" method="post">
+            <label><b>Enter a Movie Title: </b><input type="text" name="movieTitle"> </label>
+
+            <input type="submit" id="searchButton" name="searchButton" value="Search"><br>
+        </form>
+    </div>
+
+    <br>
+    <div id="error">
+        <%- error %>
+    </div>
+
+    <br>
+    <br>
+
+
+
+
+</body>
+
+</html>
